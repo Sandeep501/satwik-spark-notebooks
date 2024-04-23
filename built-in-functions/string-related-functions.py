@@ -16,3 +16,8 @@ display(df)
 
 df = df.withColumn("FullName", F.concat_ws(" ", F.col("FirstName"), F.col("LastName")))
 display(df)
+
+# COMMAND ----------
+
+df = df.drop("FirstName", "LastName")
+df.display()
